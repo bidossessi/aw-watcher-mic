@@ -26,10 +26,25 @@ edges.
 
 ## Usage
 
+Run from a development checkout:
+
 ```
 make install
 make run
 ```
+
+Install as a systemd user service, built as a self-contained bundle so it does not
+depend on the checkout:
+
+```
+make install
+make package
+make install-bundle
+```
+
+That deploys to `~/.local/lib/aw-watcher-mic` and links `~/.local/bin/aw-watcher-mic`,
+which is enough for `aw-qt` to discover it on `PATH`. Override the location with
+`PREFIX`. `make uninstall-service` removes the service and the deployed bundle.
 
 ## Development
 

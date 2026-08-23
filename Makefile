@@ -1,10 +1,13 @@
-.PHONY: install install-service uninstall-service package check lint typecheck test shellcheck run clean
+.PHONY: install install-service install-bundle uninstall-service package check lint typecheck test shellcheck run clean
 
 install:
 	poetry install
 
 install-service:
 	./install.sh
+
+install-bundle:
+	./install.sh --bundle
 
 uninstall-service:
 	./install.sh --uninstall
