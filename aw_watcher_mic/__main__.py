@@ -4,8 +4,8 @@ import logging
 
 from aw_core.log import setup_logging
 
-from .config import parse_args
-from .watcher import MicWatcher
+from aw_watcher_mic.config import parse_args
+from aw_watcher_mic.watcher import MicWatcher
 
 
 def main() -> None:

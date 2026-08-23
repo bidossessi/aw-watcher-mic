@@ -16,6 +16,7 @@ aw-client = "^0.5.14"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "*"
+pyinstaller = { version = "^6.6", python = ">=3.12,<3.14" }
 ruff = "*"
 pytest = "*"
 

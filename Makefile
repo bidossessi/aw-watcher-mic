@@ -1,4 +1,4 @@
-.PHONY: install install-service uninstall-service check lint typecheck test shellcheck run
+.PHONY: install install-service uninstall-service package check lint typecheck test shellcheck run clean
 
 install:
 	poetry install
@@ -24,5 +24,11 @@ test:
 shellcheck:
 	shellcheck install.sh
 
+package:
+	poetry run pyinstaller aw-watcher-mic.spec --clean --noconfirm
+
 run:
 	poetry run aw-watcher-mic --testing --verbose
+
+clean:
+	rm -rf build dist
