@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "aw-watcher-mic"
+version = "0.1.0"
+description = "Microphone capture watcher for ActivityWatch"
+authors = ["Stanislas Sodonon <stanislas.sodonon@gmail.com>"]
+license = "MPL-2.0"
+readme = "README.md"
+packages = [{ include = "aw_watcher_mic" }]
+
+[tool.poetry.scripts]
+aw-watcher-mic = "aw_watcher_mic:main"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aw-client = "^0.5.14"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "*"
+ruff = "*"
+pytest = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+
+[[tool.mypy.overrides]]
+module = ["aw_client.*", "aw_core.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,24 @@
+[
+  {
+    "index": 255,
+    "driver": "PipeWire",
+    "owner_module": null,
+    "client": "94",
+    "source": 63,
+    "corked": false,
+    "mute": false,
+    "properties": {
+      "client.api": "pipewire-pulse",
+      "application.name": "Slack",
+      "application.process.id": "18729",
+      "application.process.user": "user",
+      "application.process.host": "hostname",
+      "application.process.binary": "slack",
+      "application.icon_name": "slack",
+      "media.name": "RecordStream",
+      "media.class": "Stream/Input/Audio",
+      "node.name": "Slack",
+      "module-stream-restore.id": "source-output-by-application-name:Slack"
+    }
+  }
+]

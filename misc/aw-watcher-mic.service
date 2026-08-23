@@ -1,0 +1,15 @@
+[Unit]
+Description=ActivityWatch microphone watcher
+Documentation=https://activitywatch.net/
+After=aw-server.service graphical-session.target
+Wants=aw-server.service
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=__EXEC_START__
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=graphical-session.target
